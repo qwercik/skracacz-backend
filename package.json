@@ -4,7 +4,7 @@
   "description": "Backend for skracacz app",
   "private": true,
   "scripts": {
-    "start": "node -r esm -r app-module-path/cwd index.js"
+    "start": "node -r esm -r app-module-path/cwd src/index.js"
   },
   "repository": {
     "type": "git",

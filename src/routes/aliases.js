@@ -1,7 +1,7 @@
 import express from 'express'
-import db from 'db'
-import { validateUrl, validateToken } from 'validators'
-import { generateToken } from 'generators'
+import db from 'src/db'
+import { validateUrl, validateToken } from 'src/validators'
+import { generateToken } from 'src/generators'
 
 const router = express.Router()
 
@@ -24,7 +24,6 @@ router.get('/api/aliases/:token([A-Za-z0-9]+)', (req, res) => {
 
 router.post('/api/aliases', (req, res) => {
   const token = req.body.token || generateToken(10)
-  console.log(token)
   const url = req.body.url
 
   if (!validateToken(token) || !validateUrl(url)) {

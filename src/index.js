@@ -1,6 +1,6 @@
 import express from 'express'
 import logger from 'morgan'
-import aliasesRouter from 'routes/aliases'
+import aliasesRouter from 'src/routes/aliases'
 
 const app = express()
 const port = 3000
