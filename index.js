@@ -1,6 +1,6 @@
 import express from 'express'
 import logger from 'morgan'
-import indexRouter from 'routes/index'
+import aliasesRouter from 'routes/aliases'
 
 const app = express()
 const port = 3000
@@ -9,7 +9,7 @@ app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
-app.use('/', indexRouter)
+app.use('/', aliasesRouter)
 
 // error handler
 app.use((req, res) => {
