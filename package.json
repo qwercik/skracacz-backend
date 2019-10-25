@@ -2,7 +2,7 @@
   "name": "skracacz-backend",
   "version": "1.0.0",
   "description": "Backend for skracacz app",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "node index.js"
   },
@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/qwercik/skracacz-backend#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
   }
 }
