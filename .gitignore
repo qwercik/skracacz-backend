@@ -2,3 +2,4 @@ node_modules/
 *.swa
 *.swp
 *.swo
+db.json
