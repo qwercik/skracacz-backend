@@ -1,0 +1,16 @@
+{
+  "name": "skracacz-backend",
+  "version": "1.0.0",
+  "description": "Backend for skracacz app",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qwercik/skracacz-backend.git"
+  },
+  "author": "Eryk Andrzejewski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qwercik/skracacz-backend/issues"
+  },
+  "homepage": "https://github.com/qwercik/skracacz-backend#readme"
+}
