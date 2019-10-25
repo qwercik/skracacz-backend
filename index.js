@@ -1,6 +1,6 @@
 const express = require('express')
 const logger = require('morgan')
-const indexRouter = require('./routes/index')
+const indexRouter = require('routes/index')
 
 const app = express()
 const port = 3000

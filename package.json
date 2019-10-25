@@ -4,7 +4,7 @@
   "description": "Backend for skracacz app",
   "private": true,
   "scripts": {
-    "start": "node index.js"
+    "start": "node -r app-module-path/cwd index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/qwercik/skracacz-backend#readme",
   "dependencies": {
+    "app-module-path": "^2.2.0",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
