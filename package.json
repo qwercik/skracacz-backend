@@ -4,7 +4,7 @@
   "description": "Backend for skracacz app",
   "private": true,
   "scripts": {
-    "start": "node -r app-module-path/cwd index.js"
+    "start": "node -r esm -r app-module-path/cwd index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "dependencies": {
     "app-module-path": "^2.2.0",
     "debug": "~2.6.9",
+    "esm": "^3.2.25",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "lowdb": "^1.0.0",

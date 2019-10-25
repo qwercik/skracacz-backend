@@ -1,7 +1,7 @@
-const low = require('lowdb')
-const FileAsync = require('lowdb/adapters/FileAsync')
+import low from 'lowdb'
+import FileAsync from 'lowdb/adapters/FileAsync'
 
 const adapter = new FileAsync('db.json')
 const db = low(adapter)
 
-module.exports = db
+export default db
