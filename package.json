@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Backend for skracacz app",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qwercik/skracacz-backend.git"
