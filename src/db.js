@@ -1,10 +1,12 @@
 import low from 'lowdb'
-import FileSync from 'lowdb/adapters/FileSync'
+import FileAsync from 'lowdb/adapters/FileAsync'
 
-const adapter = new FileSync('db.json')
-const db = low(adapter)
+export default (async () => {
+  const adapter = new FileAsync('db.json')
+  const db = await low(adapter)
 
-db.defaults({ aliases: [] })
-  .write()
+  db.defaults({ aliases: [] })
+    .write()
 
-export default db
+  return db
+})()
