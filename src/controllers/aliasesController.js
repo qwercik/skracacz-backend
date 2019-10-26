@@ -1,10 +1,10 @@
-import dbAsync from 'src/db'
+import getDatabaseInstance from 'src/db'
 import { validateUrl, validateToken } from 'src/validators'
 import { generateToken } from 'src/generators'
 
 export default {
   async findOneAlias (req, res) {
-    const db = await dbAsync
+    const db = await getDatabaseInstance()
 
     const alias = db.get('aliases')
       .find({ token: req.params.token })
@@ -22,7 +22,8 @@ export default {
     }
   },
   async createAlias (req, res) {
-    const db = await dbAsync
+    const db = await getDatabaseInstance()
+
     const token = req.body.token || generateToken(10)
     const url = req.body.url
 

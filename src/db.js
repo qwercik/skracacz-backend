@@ -1,7 +1,7 @@
 import low from 'lowdb'
 import FileAsync from 'lowdb/adapters/FileAsync'
 
-export default (async () => {
+export default async () => {
   const adapter = new FileAsync('db.json')
   const db = await low(adapter)
 
@@ -9,4 +9,4 @@ export default (async () => {
     .write()
 
   return db
-})()
+}
