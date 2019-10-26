@@ -18,6 +18,7 @@
   "homepage": "https://github.com/qwercik/skracacz-backend#readme",
   "dependencies": {
     "app-module-path": "^2.2.0",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "esm": "^3.2.25",
     "express": "~4.16.1",

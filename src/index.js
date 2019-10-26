@@ -1,11 +1,13 @@
 import express from 'express'
 import logger from 'morgan'
+import cors from 'cors'
 import aliasesRouter from 'src/routes/aliases'
 
 const app = express()
-const port = 3000
+const port = 3001
 
 app.use(logger('dev'))
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
