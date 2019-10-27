@@ -8,3 +8,11 @@ export function generateToken (length = 10) {
 
   return output
 }
+
+export function prependUrlWithProtocol (url) {
+  if (/^https?:\/\//.test(url)) {
+    return url
+  } else {
+    return `http://${url}`
+  }
+}

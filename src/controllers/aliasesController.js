@@ -1,6 +1,6 @@
 import getDatabaseInstance from 'src/db'
 import { validateUrl, validateToken } from 'src/validators'
-import { generateToken } from 'src/generators'
+import { generateToken, prependUrlWithProtocol } from 'src/functions'
 
 export default {
   async findOneAlias (req, res) {
@@ -25,7 +25,7 @@ export default {
     const db = await getDatabaseInstance()
 
     const token = req.body.token || generateToken(10)
-    const url = req.body.url
+    const url = prependUrlWithProtocol(req.body.url)
 
     if (!validateToken(token) || !validateUrl(url)) {
       res.status(400).send({
