@@ -4,6 +4,6 @@ export function validateUrl (url) {
 }
 
 export function validateToken (token) {
-  const regex = /^[A-Za-z0-9]+$/
+  const regex = /^[A-Za-z0-9-]+$/
   return regex.test(token)
 }
